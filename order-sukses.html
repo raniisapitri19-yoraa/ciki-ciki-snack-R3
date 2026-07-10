@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pesanan Berhasil — Ciki-Ciki Snack</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="slim-header">
+  <div class="container">
+    <a href="index.html" class="brand">🍿 Ciki-Ciki Snack</a>
+    <a href="index.html" class="back-link">← Kembali ke Toko</a>
+  </div>
+</header>
+
+<section class="page-section">
+  <div class="container">
+    <div class="success-box">
+      <div style="font-size:48px;">✅</div>
+      <h2>Pembayaran Berhasil (Simulasi)</h2>
+      <p>Terima kasih! Pesananmu segera dikemas oleh tim kami.</p>
+      <p style="font-weight:800;font-family:var(--font-display);font-size:20px;" id="successOrderCode"></p>
+
+      <div id="successOrderSummary" style="text-align:left;margin-top:18px;"></div>
+
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap;">
+        <a class="btn btn-secondary" id="successTrackBtn" href="lacak-pesanan.html">📦 Lacak Pesanan</a>
+        <a href="index.html" class="btn btn-primary">Kembali ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Kalau halaman ini dibuka tanpa kode pesanan yang valid -->
+    <div class="empty-state hidden" id="orderNotFoundNotice">
+      Kode pesanan tidak ditemukan. <a href="index.html" style="text-decoration:underline;font-weight:700;">Kembali ke beranda</a>.
+    </div>
+  </div>
+</section>
+
+<script src="js/data.js"></script>
+<script src="js/order-sukses.js"></script>
+</body>
+</html>

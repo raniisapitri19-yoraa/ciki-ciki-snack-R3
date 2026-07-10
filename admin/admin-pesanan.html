@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pesanan Admin — Ciki-Ciki Snack</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+
+<div class="admin-shell" id="adminShell">
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div class="brand">🍿 Ciki-Ciki Admin</div>
+    <a class="admin-nav-link" data-page="dashboard" href="admin-dashboard.html">📊 Dashboard</a>
+    <a class="admin-nav-link" data-page="products" href="admin-produk.html">🍪 Produk</a>
+    <a class="admin-nav-link active" data-page="orders" href="admin-pesanan.html">📦 Pesanan</a>
+    <a class="admin-nav-link" data-page="settings" href="admin-pengaturan.html">⚙️ Pengaturan</a>
+    <div class="admin-nav-spacer"></div>
+    <a class="admin-nav-link" href="../index.html" target="_blank">🛍️ Lihat Toko</a>
+    <button class="admin-nav-link" id="logoutBtn">🚪 Keluar</button>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <button class="btn btn-ghost mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <h2>Pesanan</h2>
+      <div></div>
+    </div>
+
+    <section id="page-orders">
+      <div class="panel">
+        <div class="panel-head">
+          <select class="input" id="orderStatusFilter" style="max-width:220px;">
+            <option value="Semua">Semua Status</option>
+            <option value="Pesanan Diterima">Pesanan Diterima</option>
+            <option value="Dikemas">Dikemas</option>
+            <option value="Dikirim">Dikirim</option>
+            <option value="Selesai">Selesai</option>
+          </select>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="data-table">
+            <thead><tr><th>Kode</th><th>Pelanggan</th><th>Tanggal</th><th>Total</th><th>Status</th><th></th></tr></thead>
+            <tbody id="ordersBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ============ ORDER DETAIL MODAL ============ -->
+<div class="overlay" id="orderDetailOverlay">
+  <div class="modal">
+    <button class="modal-close" id="closeOrderDetailBtn">✕</button>
+    <h3>Detail Pesanan</h3>
+    <div id="orderDetailBody"></div>
+    <div style="display:flex;gap:10px;justify-content:space-between;margin-top:18px;">
+      <button class="btn btn-danger btn-sm" id="deleteOrderBtn">Hapus Pesanan</button>
+      <select class="input" id="orderStatusSelect" style="max-width:180px;">
+        <option value="Pesanan Diterima">Pesanan Diterima</option>
+        <option value="Dikemas">Dikemas</option>
+        <option value="Dikirim">Dikirim</option>
+        <option value="Selesai">Selesai</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/data.js"></script>
+<script src="js/admin-common.js"></script>
+<script src="js/admin-pesanan.js"></script>
+</body>
+</html>

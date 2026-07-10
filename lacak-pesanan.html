@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lacak Pesanan — Ciki-Ciki Snack</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="slim-header">
+  <div class="container">
+    <a href="index.html" class="brand">🍿 Ciki-Ciki Snack</a>
+    <a href="index.html" class="back-link">← Kembali ke Toko</a>
+  </div>
+</header>
+
+<section class="page-section">
+  <div class="container" style="max-width:560px;">
+    <div class="section-head" style="text-align:left;">
+      <h2>Lacak Pesanan</h2>
+      <p>Masukkan Kode Pesanan untuk melihat status pengiriman terkini. Status ini sama persis dengan yang diatur admin di panel admin.</p>
+    </div>
+
+    <div class="panel">
+      <div class="form-group">
+        <label for="trackCodeInput">Kode Pesanan</label>
+        <input class="input" type="text" id="trackCodeInput" placeholder="Contoh: CK261234" />
+      </div>
+      <button class="btn btn-primary btn-block" id="trackSubmitBtn">Cek Status</button>
+      <div id="trackResult" style="margin-top:18px;"></div>
+    </div>
+  </div>
+</section>
+
+<script src="js/data.js"></script>
+<script src="js/lacak-pesanan.js"></script>
+</body>
+</html>

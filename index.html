@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ciki-Ciki Snack — Toko Kelontong Online</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a href="#home" class="brand">🍿 Ciki-Ciki Snack</a>
+        <nav class="nav-links" id="navLinks">
+          <a href="#home">Beranda</a>
+          <a href="#catalog">Katalog</a>
+          <a href="#about">Tentang Kami</a>
+          <a href="lacak-pesanan.html" id="trackOrderLink">Lacak Pesanan</a>
+          <a href="#footer">Kontak</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="cart-btn" id="openCartBtn">
+            🛒 Keranjang <span class="cart-count" id="cartCount">0</span>
+          </button>
+          <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">🏪 Toko kelontong digital sejak 2019</span>
+          <h1>Ciki-ciki favoritmu, nempel di keranjang, sampai depan pintu.</h1>
+          <p class="lead">
+            Dari keripik gurih sampai coklat manis — semua jajanan kelontong
+            kesukaanmu kini bisa dipesan online, harga bersahabat kayak beli di
+            warung sebelah rumah.
+          </p>
+          <div class="hero-ctas">
+            <a href="#catalog" class="btn btn-primary">Belanja Sekarang</a>
+            <a href="#about" class="btn btn-secondary">Tentang Kami</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="stat-num">10+</div>
+              <div class="stat-label">Varian Snack</div>
+            </div>
+            <div>
+              <div class="stat-num">4.8/5</div>
+              <div class="stat-label">Rating Pelanggan</div>
+            </div>
+            <div>
+              <div class="stat-num">1000+</div>
+              <div class="stat-label">Bungkus Terkirim/bln</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="chip">🥔</div>
+          <div class="chip">🍫</div>
+          <div class="chip">🍘</div>
+          <div class="chip">🍬</div>
+          <div class="chip">🍟</div>
+          <div class="chip">🦐</div>
+        </div>
+      </div>
+    </section>
+    <div class="zigzag-divider"></div>
+
+    <!-- ============ CATALOG ============ -->
+    <section class="section" id="catalog">
+      <div class="container">
+        <div class="section-head">
+          <h2>Katalog Produk</h2>
+          <p>Cari, saring, temukan ciki-ciki paling pas buat nemenin harimu.</p>
+        </div>
+
+        <div class="catalog-controls">
+          <input
+            type="text"
+            class="input"
+            id="searchInput"
+            placeholder="🔍 Cari nama snack..."
+          />
+          <select class="input" id="sortSelect">
+            <option value="rekomendasi">Urutkan: Rekomendasi</option>
+            <option value="harga-asc">Harga: Rendah ke Tinggi</option>
+            <option value="harga-desc">Harga: Tinggi ke Rendah</option>
+            <option value="nama">Nama: A-Z</option>
+          </select>
+        </div>
+        <div class="category-pills" id="categoryPills"></div>
+        <br />
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" style="background: var(--paper)">
+      <div class="container">
+        <div class="section-head">
+          <h2>Tentang Ciki-Ciki Snack</h2>
+          <p>
+            Warung kelontong yang naik kelas ke dunia digital, tanpa kehilangan
+            rasa rumahan.
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="icon">🏪</div>
+            <h3>Cerita Kami</h3>
+            <p>
+              Berawal dari kios kelontong kecil di pinggir kampung, kini
+              Ciki-Ciki Snack melayani pelanggan lewat toko online — tetap
+              dengan harga bersahabat dan stok selalu segar.
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="icon">🚚</div>
+            <h3>Kirim Cepat</h3>
+            <p>
+              Pesanan diproses dalam 1x24 jam, dikemas rapi supaya keripik
+              sampai tetap kriuk, bukan remuk.
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="icon">💳</div>
+            <h3>Bayar Fleksibel</h3>
+            <p>
+              Transfer bank, e-wallet, sampai COD — kamu yang pilih, kami yang
+              siapin ciki-cikinya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Kata Pelanggan</h2>
+          <p>
+            Cerita asli dari pelanggan yang sudah belanja ciki-ciki di sini.
+          </p>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Kentangnya masih kriuk banget pas nyampe, dibungkus rapi nggak
+              remuk. Pedas level 3-nya pas, nggak berlebihan. Pasti order lagi!"
+            </p>
+            <div class="testimonial-person">
+              <div class="avatar">R</div>
+              <div>
+                <div class="person-name">Rani Wulandari</div>
+                <div class="person-meta">
+                  Bandung • Pembeli Stik Kentang Pedas
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Harganya bersahabat kayak beli di warung, tapi belanjanya enak
+              banget dari HP. Kerupuk bawangnya gurih, anak-anak suka."
+            </p>
+            <div class="testimonial-person">
+              <div class="avatar">D</div>
+              <div>
+                <div class="person-name">Dimas Prasetyo</div>
+                <div class="person-meta">
+                  Bandung Barat • Pembeli Kerupuk Bawang
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★☆</div>
+            <p class="testimonial-quote">
+              "Proses checkout gampang, ada fitur lacak pesanan juga jadi nggak
+              bolak-balik nanya admin. Wafer coklatnya enak, cuma pengiriman
+              agak lama pas weekend."
+            </p>
+            <div class="testimonial-person">
+              <div class="avatar">S</div>
+              <div>
+                <div class="person-name">Siti Nurhaliza</div>
+                <div class="person-meta">
+                  Cimahi • Pembeli Wafer Coklat Legit
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer" id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">🍿 Ciki-Ciki Snack</div>
+            <p>
+              Toko kelontong online spesialis jajanan ciki-ciki: keripik, wafer,
+              permen, coklat, sampai kerupuk — harga bersahabat, rasa kangen
+              kampung halaman.
+            </p>
+          </div>
+          <div>
+            <h4>Belanja</h4>
+            <ul>
+              <li><a href="#catalog">Semua Produk</a></li>
+              <li><a href="#catalog">Promo Diskon</a></li>
+              <li><a href="#about">Tentang Kami</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Bantuan</h4>
+            <ul>
+              <li>
+                <a href="lacak-pesanan.html" id="trackOrderLink2"
+                  >Cara Pemesanan</a
+                >
+              </li>
+              <li><a href="#">Metode Pembayaran</a></li>
+              <li><a href="#">Kebijakan Retur</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Kontak</h4>
+            <ul>
+              <li>📍 Jl. Bandung Barat, Kab. Bandung Barat, Jawa Barat</li>
+              <li>📞 0812-3456-7890</li>
+              <li>✉️ halo@cikicikisnack.id</li>
+              <li>🕐 Setiap hari, 08.00–20.00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >© 2026 Ciki-Ciki Snack. Semua hak cipta dilindungi. Dibuat untuk
+            keperluan tugas kuliah.</span
+          >
+          <a href="admin/admin-login.html">Masuk Admin →</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ CART DRAWER ============ -->
+    <div class="drawer-overlay" id="cartOverlay"></div>
+    <aside class="drawer" id="cartDrawer">
+      <div class="drawer-head">
+        <h3>Keranjang Kamu</h3>
+        <button class="modal-close" id="closeCartBtn">✕</button>
+      </div>
+      <div class="drawer-body" id="cartBody"></div>
+      <div class="drawer-foot">
+        <div class="summary-row total">
+          <span>Total</span><span id="cartTotal">Rp0</span>
+        </div>
+        <br />
+        <button class="btn btn-primary btn-block" id="goCheckoutBtn">
+          Checkout
+        </button>
+      </div>
+    </aside>
+
+    <!-- ============ CHECKOUT / SUKSES / LACAK PESANAN ============
+     Halaman-halaman ini sekarang terpisah, lihat: checkout.html,
+     order-sukses.html, dan lacak-pesanan.html -->
+
+    <div class="toast" id="toast"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+  </body>
+</html>

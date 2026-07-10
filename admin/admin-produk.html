@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Produk Admin — Ciki-Ciki Snack</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+
+<div class="admin-shell" id="adminShell">
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div class="brand">🍿 Ciki-Ciki Admin</div>
+    <a class="admin-nav-link" data-page="dashboard" href="admin-dashboard.html">📊 Dashboard</a>
+    <a class="admin-nav-link active" data-page="products" href="admin-produk.html">🍪 Produk</a>
+    <a class="admin-nav-link" data-page="orders" href="admin-pesanan.html">📦 Pesanan</a>
+    <a class="admin-nav-link" data-page="settings" href="admin-pengaturan.html">⚙️ Pengaturan</a>
+    <div class="admin-nav-spacer"></div>
+    <a class="admin-nav-link" href="../index.html" target="_blank">🛍️ Lihat Toko</a>
+    <button class="admin-nav-link" id="logoutBtn">🚪 Keluar</button>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <button class="btn btn-ghost mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <h2>Produk</h2>
+      <div></div>
+    </div>
+
+    <section id="page-products">
+      <div class="panel">
+        <div class="panel-head">
+          <select class="input" id="productCategoryFilter" style="max-width:220px;">
+            <option value="Semua">Semua Kategori</option>
+          </select>
+          <button class="btn btn-primary btn-sm" id="addProductBtn">+ Tambah Produk</button>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="data-table">
+            <thead><tr><th>Produk</th><th>Kategori</th><th>Harga</th><th>Badge</th><th></th></tr></thead>
+            <tbody id="productsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ============ PRODUCT MODAL ============ -->
+<div class="overlay" id="productOverlay">
+  <div class="modal">
+    <button class="modal-close" id="closeProductModalBtn">✕</button>
+    <h3 id="productModalTitle">Tambah Produk</h3>
+    <form id="productForm">
+      <input type="hidden" id="p-id" />
+      <div class="form-group">
+        <label for="p-imageFile">Foto Produk (opsional)</label>
+        <input type="file" class="input" id="p-imageFile" accept="image/*" />
+        <div style="font-size:12px;color:var(--ink-soft);margin-top:4px;">Kosongkan untuk memakai tampilan emoji di bawah. Foto bawaan katalog tersimpan di folder <code>image/produk</code>.</div>
+      </div>
+      <div class="form-group" id="fg-p-name">
+        <label for="p-name">Nama Produk *</label>
+        <input class="input" type="text" id="p-name" required />
+        <div class="error-text">Nama produk wajib diisi.</div>
+      </div>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label for="p-emoji">Emoji</label>
+          <input class="input" type="text" id="p-emoji" maxlength="4" placeholder="🍪" />
+        </div>
+        <div class="form-group" id="fg-p-category">
+          <label for="p-category">Kategori *</label>
+          <input class="input" type="text" id="p-category" required placeholder="Keripik / Kerupuk / Coklat / Permen" />
+          <div class="error-text">Kategori wajib diisi.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="p-badge">Badge</label>
+        <select class="input" id="p-badge">
+          <option value="">Tidak ada</option>
+          <option value="Best Seller">Best Seller</option>
+          <option value="Promo">Promo</option>
+          <option value="Baru">Baru</option>
+        </select>
+      </div>
+      <div class="form-row-2">
+        <div class="form-group" id="fg-p-price">
+          <label for="p-price">Harga Jual (Rp) *</label>
+          <input class="input" type="number" id="p-price" min="0" required />
+          <div class="error-text">Harga jual wajib diisi.</div>
+        </div>
+        <div class="form-group">
+          <label for="p-oldprice">Harga Coret (Rp)</label>
+          <input class="input" type="number" id="p-oldprice" min="0" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="p-desc">Deskripsi</label>
+        <textarea class="input" id="p-desc"></textarea>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:10px;">
+        <button type="button" class="btn btn-ghost" id="cancelProductBtn">Batal</button>
+        <button type="submit" class="btn btn-primary">Simpan Produk</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/data.js"></script>
+<script src="js/admin-common.js"></script>
+<script src="js/admin-produk.js"></script>
+</body>
+</html>

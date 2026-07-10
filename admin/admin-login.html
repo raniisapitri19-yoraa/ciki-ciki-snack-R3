@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login Admin — Ciki-Ciki Snack</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+
+<div class="login-screen" id="loginScreen">
+  <div class="login-card">
+    <div class="icon">🔐</div>
+    <h2>Admin Ciki-Ciki</h2>
+    <p style="color:var(--ink-soft);font-size:14px;">Masuk untuk mengelola produk &amp; pesanan toko.</p>
+    <form id="loginForm" style="margin-top:20px;text-align:left;">
+      <div class="form-group" id="fg-login-password">
+        <label for="loginPassword">Kata Sandi</label>
+        <input class="input" type="password" id="loginPassword" required />
+        <div class="error-text">Kata sandi salah. Coba lagi.</div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+    </form>
+    <p class="login-hint">Default: <strong>admin123</strong> (bisa diganti di menu Pengaturan setelah masuk)</p>
+    <p style="margin-top:14px;"><a href="../index.html" style="font-size:13px;color:var(--ink-soft);text-decoration:underline;">← Kembali ke toko</a></p>
+  </div>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="js/admin-login.js"></script>
+</body>
+</html>

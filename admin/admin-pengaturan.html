@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pengaturan Admin — Ciki-Ciki Snack</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+
+<div class="admin-shell" id="adminShell">
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div class="brand">🍿 Ciki-Ciki Admin</div>
+    <a class="admin-nav-link" data-page="dashboard" href="admin-dashboard.html">📊 Dashboard</a>
+    <a class="admin-nav-link" data-page="products" href="admin-produk.html">🍪 Produk</a>
+    <a class="admin-nav-link" data-page="orders" href="admin-pesanan.html">📦 Pesanan</a>
+    <a class="admin-nav-link active" data-page="settings" href="admin-pengaturan.html">⚙️ Pengaturan</a>
+    <div class="admin-nav-spacer"></div>
+    <a class="admin-nav-link" href="../index.html" target="_blank">🛍️ Lihat Toko</a>
+    <button class="admin-nav-link" id="logoutBtn">🚪 Keluar</button>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <button class="btn btn-ghost mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <h2>Pengaturan</h2>
+      <div></div>
+    </div>
+
+    <section id="page-settings">
+      <div class="panel">
+        <h3>Ganti Kata Sandi Admin</h3>
+        <form id="changePasswordForm">
+          <div class="form-group" id="fg-current-pass">
+            <label for="currentPassword">Kata Sandi Saat Ini</label>
+            <input class="input" type="password" id="currentPassword" required />
+            <div class="error-text">Kata sandi saat ini salah.</div>
+          </div>
+          <div class="form-group" id="fg-new-pass">
+            <label for="newPassword">Kata Sandi Baru</label>
+            <input class="input" type="password" id="newPassword" required minlength="4" />
+            <div class="error-text">Kata sandi baru minimal 4 karakter.</div>
+          </div>
+          <div class="form-group" id="fg-confirm-pass">
+            <label for="confirmPassword">Ulangi Kata Sandi Baru</label>
+            <input class="input" type="password" id="confirmPassword" required />
+            <div class="error-text">Konfirmasi kata sandi tidak cocok.</div>
+          </div>
+          <button type="submit" class="btn btn-primary">Simpan Kata Sandi</button>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h3>Reset Data</h3>
+        <p style="color:var(--ink-soft);font-size:14px;">Menghapus seluruh perubahan produk kustom dan mengembalikan katalog toko ke bawaan (foto asli). Data pesanan tidak terpengaruh.</p>
+        <button class="btn btn-secondary" id="resetCatalogBtn">Pulihkan Katalog Bawaan</button>
+      </div>
+
+      <div class="panel">
+        <h3>Hapus Semua Pesanan</h3>
+        <p style="color:var(--ink-soft);font-size:14px;">Tindakan ini tidak bisa dibatalkan. Gunakan hanya untuk keperluan pengujian.</p>
+        <button class="btn btn-danger" id="clearOrdersBtn">Hapus Semua Data Pesanan</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/data.js"></script>
+<script src="js/admin-common.js"></script>
+<script src="js/admin-pengaturan.js"></script>
+</body>
+</html>

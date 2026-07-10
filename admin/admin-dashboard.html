@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard Admin — Ciki-Ciki Snack</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+
+<div class="admin-shell" id="adminShell">
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div class="brand">🍿 Ciki-Ciki Admin</div>
+    <a class="admin-nav-link active" data-page="dashboard" href="admin-dashboard.html">📊 Dashboard</a>
+    <a class="admin-nav-link" data-page="products" href="admin-produk.html">🍪 Produk</a>
+    <a class="admin-nav-link" data-page="orders" href="admin-pesanan.html">📦 Pesanan</a>
+    <a class="admin-nav-link" data-page="settings" href="admin-pengaturan.html">⚙️ Pengaturan</a>
+    <div class="admin-nav-spacer"></div>
+    <a class="admin-nav-link" href="../index.html" target="_blank">🛍️ Lihat Toko</a>
+    <button class="admin-nav-link" id="logoutBtn">🚪 Keluar</button>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <button class="btn btn-ghost mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <h2>Dashboard</h2>
+      <div></div>
+    </div>
+
+    <section id="page-dashboard">
+      <p style="color:var(--ink-soft);margin-top:-10px;margin-bottom:20px;">Ringkasan performa toko Ciki-Ciki Snack</p>
+      <div class="stat-cards">
+        <div class="stat-card"><div class="stat-label">Total Pendapatan</div><div class="stat-value" id="statRevenue">Rp0</div></div>
+        <div class="stat-card"><div class="stat-label">Total Pesanan</div><div class="stat-value" id="statOrders">0</div></div>
+        <div class="stat-card"><div class="stat-label">Menunggu Diproses</div><div class="stat-value" id="statPending">0</div></div>
+        <div class="stat-card"><div class="stat-label">Produk Aktif</div><div class="stat-value" id="statProducts">0</div></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3 style="margin:0;">Pesanan Terbaru</h3></div>
+        <div style="overflow-x:auto;">
+          <table class="data-table">
+            <thead><tr><th>Kode</th><th>Pelanggan</th><th>Total</th><th>Status</th></tr></thead>
+            <tbody id="recentOrdersBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3 style="margin:0;">Produk Terlaris</h3></div>
+        <div style="overflow-x:auto;">
+          <table class="data-table">
+            <thead><tr><th>Produk</th><th>Kategori</th><th>Terjual</th></tr></thead>
+            <tbody id="topProductsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/data.js"></script>
+<script src="js/admin-common.js"></script>
+<script src="js/admin-dashboard.js"></script>
+</body>
+</html>
