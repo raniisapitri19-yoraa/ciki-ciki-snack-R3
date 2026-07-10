@@ -15,8 +15,7 @@
 ## 🔗 LINK AKSES UTAMA
 * **Link Live Website (Customer):** https://raniisapitri19-yoraa.github.io/ciki-ciki-snack-R3/
 * **Link Halaman Admin:** https://raniisapitri19-yoraa.github.io/ciki-ciki-snack-R3/admin/admin-login.html
-* **Link Repository GitHub:** [Isi link repository GitHub kamu di sini] untuk melihat *source code* repositori.
-
+* **Link Repository GitHub:** https://github.com/raniisapitri19-yoraa/ciki-ciki-snack-R3/
 ---
 
 ## 📝 DESKRIPSI & STRATEGI BISNIS
