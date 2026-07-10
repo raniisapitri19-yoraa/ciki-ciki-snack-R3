@@ -4,17 +4,17 @@
 ---
 
 ### 👤 IDENTITAS MAHASISWA
-* **Nama:** [Isi Nama Kamu]
-* **NIM:** [Isi NIM Kamu]
-* **Mata Kuliah:** [Isi Nama Mata Kuliah]
-* **Program Studi:** [Isi Program Studi]
+* **Nama:** Rani Sapitri
+* **NIM:** 209250150
+* **Mata Kuliah:** Komputer Aplikasi IT II
+* **Program Studi:** Administrasi Bisnis (ABI 6)
 * **Semester:** Genap 2025/2026
 
 ---
 
 ## 🔗 LINK AKSES UTAMA
-* **Link Live Website (Customer):** [Isi link GitHub Pages / hosting kamu di sini] untuk mengakses toko utama pelanggan.
-* **Link Halaman Admin:** [Isi link yang sama]/admin/admin-login.html untuk masuk ke panel pengelolaan admin.
+* **Link Live Website (Customer):** https://raniisapitri19-yoraa.github.io/ciki-ciki-snack-R3/
+* **Link Halaman Admin:** https://raniisapitri19-yoraa.github.io/ciki-ciki-snack-R3/admin/admin-login.html
 * **Link Repository GitHub:** [Isi link repository GitHub kamu di sini] untuk melihat *source code* repositori.
 
 ---
