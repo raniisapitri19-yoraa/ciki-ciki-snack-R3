@@ -16,6 +16,7 @@
 * **Link Live Website (Customer):** https://raniisapitri19-yoraa.github.io/ciki-ciki-snack-R3/
 * **Link Halaman Admin:** https://raniisapitri19-yoraa.github.io/ciki-ciki-snack-R3/admin/admin-login.html
 * **Link Repository GitHub:** https://github.com/raniisapitri19-yoraa/ciki-ciki-snack-R3/
+* **Link youtube :** https://youtu.be/GC3fTuNmddo?si=Nt7zeS5QDJzytr_V 
 ---
 
 ## 📝 DESKRIPSI & STRATEGI BISNIS
